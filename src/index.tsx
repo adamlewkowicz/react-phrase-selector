@@ -8,10 +8,10 @@ export const PhraseSelector = ({
   ...props
 }: PhraseSelectorProps) => {
 
-  const val = value.toLowerCase();
-  const phrs = phrase.toLowerCase();
+  const loweredValue = value.toLowerCase();
+  const loweredPhrase = phrase.toLowerCase();
 
-  const phraseStart = val.indexOf(phrs);
+  const phraseStart = loweredValue.indexOf(loweredPhrase);
   if (phraseStart === -1) return value;
   const phraseEnd = phraseStart + phrase.length;
 
@@ -30,4 +30,5 @@ interface PhraseSelectorProps {
   value: string
   phrase: string
   className: string
+  [strongProps: string]: any
 }
