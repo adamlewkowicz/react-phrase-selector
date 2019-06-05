@@ -24,6 +24,9 @@
     "url": "https://github.com/alk831/react-phrase-selector/issues"
   },
   "homepage": "https://github.com/alk831/react-phrase-selector#readme",
+  "peerDependencies": {
+    "react": "16.x"
+  },
   "devDependencies": {
     "@types/react": "^16.8.19",
     "autoprefixer": "^9.6.0",
