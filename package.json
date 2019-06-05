@@ -26,9 +26,14 @@
   "homepage": "https://github.com/alk831/react-phrase-selector#readme",
   "devDependencies": {
     "@types/react": "^16.8.19",
+    "autoprefixer": "^9.6.0",
     "css-modules": "^0.3.0",
+    "gulp": "^4.0.2",
+    "gulp-typescript": "^5.0.1",
     "node-sass": "^4.12.0",
+    "postcss-modules": "^1.4.1",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "typescript": "^3.5.1"
   }
 }
