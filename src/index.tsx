@@ -1,41 +1,38 @@
 import * as React from 'react';
-import css from './style.scss';
-import { StandardLonghandProperties } from 'csstype';
+import './style.css';
 
-export const defaultStyle: StandardLonghandProperties = {
-  backgroundColor: '#79FEE0'
-}
-
-export const PhraseSelector = ({
-  value,
-  phrase,
-  className = css.selection,
-  style = defaultStyle,
-  ...props
-}: PhraseSelectorProps) => {
-
-  const loweredValue = value.toLowerCase();
-  const loweredPhrase = phrase.toLowerCase();
-
-  const phraseStart = loweredValue.indexOf(loweredPhrase);
-  if (phraseStart === -1) return value;
-  const phraseEnd = phraseStart + phrase.length;
-
-  return (
-    <>
-      {value.slice(0, phraseStart)}
-      <strong style={style} {...props}>
-        {value.slice(phraseStart, phraseEnd)}
-      </strong>
-      {value.slice(phraseEnd)}
-    </>
-  )
-}
 
 interface PhraseSelectorProps {
   value: string
   phrase: string
-  className: string
-  style: StandardLonghandProperties
-  [strongProps: string]: any
+  className?: string
+}
+export const PhraseSelector = ({
+  className = 'react-phrase-selector',
+  ...props
+}: PhraseSelectorProps) => {
+
+  const loweredValue = props.value.toLowerCase();
+  const loweredPhrase = props.phrase.toLowerCase();
+
+  const phraseStart = loweredValue.indexOf(loweredPhrase);
+  const phraseEnd = phraseStart + props.phrase.length;
+
+  if (phraseStart === -1) {
+    return (
+      <>
+        {props.value}
+      </>
+    );
+  }
+
+  return (
+    <>
+      {props.value.slice(0, phraseStart)}
+      <strong {...props}>
+        {props.value.slice(phraseStart, phraseEnd)}
+      </strong>
+      {props.value.slice(phraseEnd)}
+    </>
+  );
 }
