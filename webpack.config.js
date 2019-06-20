@@ -7,7 +7,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, '/build'),
-    filename: 'build.min.js'
+    filename: 'app.bundle.js'
   },
   module: {
     rules: [
@@ -20,5 +20,8 @@ module.exports = {
         loader: 'css-loader'
       }
     ]
+  },
+  optimization: {
+    minimize: false
   }
 }
