@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PhraseSelector /> doesn't return selected text if phrase wasn't found 1`] = `
+<div>
+  Interstellar
+</div>
+`;
+
+exports[`<PhraseSelector /> selects phrase correctly 1`] = `
+<div>
+  
+  <strong
+    class="react-phrase-selector"
+  >
+    Int
+  </strong>
+  erstellar
+</div>
+`;
