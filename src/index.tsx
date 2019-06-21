@@ -2,7 +2,7 @@ import * as React from 'react';
 import './style.css';
 
 
-interface PhraseSelectorProps extends React.HTMLProps<HTMLDivElement> {
+interface PhraseSelectorProps extends React.HTMLProps<HTMLBaseElement> {
   value: string
   phrase: string
   className?: string

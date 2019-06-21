@@ -7,7 +7,7 @@
   "scripts": {
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "prepare": "tsc -d && echo 'Finished building NPM package'"
+    "prepublish": "tsc -d && echo 'Finished building NPM package'"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "@testing-library/react": "^8.0.1",
+    "@types/jest": "^24.0.15",
     "@types/react": "^16.8.19",
     "autoprefixer": "^9.6.0",
     "css-modules": "^0.3.0",
@@ -45,7 +46,5 @@
     "ts-jest": "^24.0.2",
     "typescript": "^3.5.1"
   },
-  "dependencies": {
-    "@types/jest": "^24.0.15"
-  }
+  "dependencies": {}
 }

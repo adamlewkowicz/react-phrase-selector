@@ -9,7 +9,7 @@ describe('<PhraseSelector />', () => {
   test('selects phrase correctly', () => {
     const { container } = render(
       <PhraseSelector
-        value={"Interstellar"}
+        value="Interstellar"
         phrase="int"
       />
     );
@@ -20,7 +20,7 @@ describe('<PhraseSelector />', () => {
   test(`doesn't return selected text if phrase wasn't found`, () => {
     const { container } = render(
       <PhraseSelector
-        value={"Interstellar"}
+        value="Interstellar"
         phrase="abc"
       />
     );
