@@ -13,7 +13,7 @@
     "test": "jest",
     "test:coverage": "jest --coverage",
     "build": "rollup -c",
-    "prepublish": "tsc -d && echo 'Finished building NPM package'"
+    "prepublish": "npm run build && echo 'Finished building NPM package'"
   },
   "repository": {
     "type": "git",
