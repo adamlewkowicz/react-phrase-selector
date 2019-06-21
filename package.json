@@ -26,7 +26,8 @@
   },
   "homepage": "https://github.com/alk831/react-phrase-selector#readme",
   "peerDependencies": {
-    "react": "16.x"
+    "react": "16.x",
+    "react-dom": "16.x"
   },
   "devDependencies": {
     "@testing-library/react": "^8.0.1",
